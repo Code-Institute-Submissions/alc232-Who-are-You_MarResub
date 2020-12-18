@@ -32,3 +32,21 @@ label{
     font-weight: 900;
     color: antiquewhite;
 }
+
+.btn {
+  border: 1px solid gold;
+  background-color: black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 3px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  color: gold;
+  outline: none;
+  font-size: 23px;
+}
+.btn:hover{
+    background-color: gold;
+    color: black;
+}
