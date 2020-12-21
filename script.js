@@ -57,7 +57,7 @@ var questions = [{
     "money": "yes",
     "image": "https://www.small-screen.co.uk/wp-content/uploads/2019/11/captain-america-marvel-comics-1050x450.jpg",
     "counter": 0
-}, 
+},
 // black panther
 {
     "color": "black",
@@ -82,7 +82,7 @@ var questions = [{
 // button for submitting data
 let submit = document.getElementById("submit");
 
-submit.addEventListener("click", function() {
+submit.addEventListener("click", function () {
     let name = document.getElementById("name").value;
     let power = document.getElementById("power").value;
     let cape = document.getElementById("cape").value;
@@ -93,5 +93,56 @@ submit.addEventListener("click", function() {
 
     let output = document.getElementById("output");
 
-// 
-})
+    console.log(result);
+
+    // display on page
+    output.innerHTML=`<h2>${name} your superhero reccomedation is ${resultData}</h2>`;
+
+    output.innerHTML += `<img style="width : 400px" src="${resultData.image}">`;
+
+    // function to show images
+
+    function showImage(p, c, w, m) {
+         result = [];
+         counterPower = 0;
+         counterCape = 0;
+         counterWeather = 0;
+         counterMoney = 0;
+
+        for (let i = 0; questions.length; i++) {
+            if (questions[i]["power"] === p) {
+                questions[i]["power"]++;
+                result.push(questions[i]);
+            }
+            for (let i = 0; questions.length; i++) {
+                if (questions[i]["cape"] === c) {
+                    questions[i]["cape"]++;
+                    result.push(questions[i]);
+                }
+                for (let i = 0; questions.length; i++) {
+                    if (questions[i]["weather"] === w) {
+                        questions[i]["weather"]++;
+                        result.push(questions[i]);
+                    }
+                    for (let i = 0; questions.length; i++) {
+                        if (questions[i]["money"] === m) {
+                            questions[i]["money"]++;
+                            result.push(questions[i]);
+                        }
+                        return getHighestCounter(result);
+
+                    }
+
+
+                    // Gets object with highest counter
+                    function getHighestCounter(data) {
+                        return data.reduce(
+                            (max, data) => (data.counter > max ? data.counter : max),
+                            data[0]
+                        )
+                    }
+                }
+            }
+        }
+    }
+});
