@@ -1,4 +1,4 @@
-# Caard Game
+# Who are you???
 
 ## Desciption
 
@@ -20,7 +20,7 @@ The game was designed to be challenging fun and interactive to people of all age
 
 ## Features To be added
 
-The game will have features added in the future, a selection of different characters that can be "won". Also you will be able to select the gender of the character you wish to find.
+The game will have features added in the future, a selection of different characters that can be "won". Also you will be able to determine the gender of the character based on the information you provide.
 
 # 
 
@@ -37,4 +37,4 @@ Audio will also be added to add a better experience in the future!
 
 # Acknowledgements
 
-I would like to thank my mentor [Felipe Alarcon](https://github.com/felipe-alarcon) for the patience and willing to try and help. Also I would like to thank everyone at code institute. 
+I would like to thank my mentor [Felipe Alarcon](https://github.com/felipe-alarcon) for the patience and willing to try and help. Also I would like to thank everyone at code institute. Ive really struggled with the understanding of JS portion of the course and they have been patient.
