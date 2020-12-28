@@ -11,7 +11,7 @@ var questions = [{
 // Superman
 {
     "color": "red",
-    "power": "steel",
+    "power": "Man if Steel",
     "cape": "yes",
     "weather": "sunny",
     "money": "yes",
@@ -60,10 +60,10 @@ var questions = [{
 },
 // black panther
 {
-    "color": "black",
+    "color": "grey",
     "power": "claws",
     "cape": "no",
-    "weather": "sun",
+    "weather": "sunny",
     "money": "yes",
     "image": "https://upload.wikimedia.org/wikipedia/en/9/9f/Black_Panther_OS_Vol_1_2.png",
     "counter": 0
@@ -71,9 +71,9 @@ var questions = [{
 // wolverine
 {
     "color": "yellow",
-    "power": "claws",
+    "power": "blades",
     "cape": "no",
-    "weather": "sun",
+    "weather": "Thunder",
     "money": "yes",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXfPTaPq2n5nzQC-3UpQFBY8tYYywAAuZykg&usqp=CAU",
     "counter": 0
@@ -93,7 +93,7 @@ submit.addEventListener("click", function () {
 
     let output = document.getElementById("output");
 
-    console.log(result);
+    console.log(resultData);
 
     // display on page
     output.innerHTML=`<h2>${name} your superhero reccomedation is ${resultData}</h2>`;
