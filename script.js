@@ -103,11 +103,11 @@ submit.addEventListener("click", function () {
     // function to show images
 
     function showImage(p, c, w, m) {
-         result = [];
-         counterPower = 0;
-         counterCape = 0;
-         counterWeather = 0;
-         counterMoney = 0;
+         var result = [];
+         var counterPower = 0;
+         var counterCape = 0;
+         var counterWeather = 0;
+         var counterMoney = 0;
 
         for (let i = 0; questions.length; i++) {
             if (questions[i]["power"] === p) {

@@ -23,6 +23,13 @@ body {
   box-shadow: 0 0 10px 2px;
 }
 
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gold;
+}
+
 label{
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -49,4 +56,10 @@ label{
 .btn:hover{
     background-color: gold;
     color: black;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-color: red;
+  }
 }
