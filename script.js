@@ -1,6 +1,6 @@
 var questions = [{
     // goku
-    "color": "orange",
+    "tint": "orange",
     "power": "strength",
     "cape": "no",
     "weather": "sunny",
@@ -10,17 +10,17 @@ var questions = [{
 },
 // Superman
 {
-    "color": "red",
+    "tint": "red",
     "power": "Man if Steel",
     "cape": "yes",
     "weather": "sunny",
-    "money": "yes",
-    "image": "https://static.wikia.nocookie.net/marvel_dc/images/a/a5/Superman_Vol_5_1_Textless.jpg/revision/latest?cb=20180711061148",
+    "money": "no",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapercave.com%2Fsuperman-cartoon-wallpapers&psig=AOvVaw0qmKy5nedU3qazSzrsBc1d&ust=1609282431766000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKD78bLi8e0CFQAAAAAdAAAAABAD",
     "counter": 0
 },
 // batman
 {
-    "color": "black",
+    "tint": "black",
     "power": "money",
     "cape": "yes",
     "weather": "rain",
@@ -30,7 +30,7 @@ var questions = [{
 },
 // green lantern
 {
-    "color": "green",
+    "tint": "green",
     "power": "ring",
     "cape": "no",
     "weather": "wind",
@@ -40,17 +40,17 @@ var questions = [{
 },
 // thor
 {
-    "color": "silver",
+    "tint": "silver",
     "power": "hammer",
     "cape": "yes",
     "weather": "wind",
     "money": "yes",
-    "image": "https://static.wikia.nocookie.net/marveldatabase/images/5/55/Thor_Odinson_%28Earth-616%29_from_Empyre_Vol_1_1_001.jpg/revision/latest?cb=20200829210404",
+    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcomicvine.gamespot.com%2Fthor%2F4005-2268%2Fforums%2Fwould-you-watch-a-mighty-thor-cartoon-376272%2F&psig=AOvVaw3vqGo_406mWrCRBGCYt3Hn&ust=1609282571111000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjd9vPi8e0CFQAAAAAdAAAAABAD",
     "counter": 0
 },
 // captain america 
 {
-    "color": "blue",
+    "tint": "blue",
     "power": "shield",
     "cape": "no",
     "weather": "rain",
@@ -60,7 +60,7 @@ var questions = [{
 },
 // black panther
 {
-    "color": "grey",
+    "tint": "grey",
     "power": "claws",
     "cape": "no",
     "weather": "sunny",
@@ -70,7 +70,7 @@ var questions = [{
 },
 // wolverine
 {
-    "color": "yellow",
+    "tint": "yellow",
     "power": "blades",
     "cape": "no",
     "weather": "Thunder",
@@ -78,7 +78,7 @@ var questions = [{
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXfPTaPq2n5nzQC-3UpQFBY8tYYywAAuZykg&usqp=CAU",
     "counter": 0
 }
-]
+];
 // button for submitting data
 let submit = document.getElementById("submit");
 
@@ -88,8 +88,9 @@ submit.addEventListener("click", function () {
     let cape = document.getElementById("cape").value;
     let weather = document.getElementById("weather").value;
     let money = document.getElementById("money").value;
+    let tint = document.getElementById("tint").value;
 
-    const resultData = showImage(power, cape, weather, money);
+    const resultData = showImage(power, cape, weather, money, tint);
 
     let output = document.getElementById("output");
 
@@ -102,13 +103,13 @@ submit.addEventListener("click", function () {
 
     // function to show images
 
-    function showImage(p, c, w, m) {
+    function showImage(p, c, w, m, t) {
          var result = [];
-         var counterPower = 0;
-         var counterCape = 0;
-         var counterWeather = 0;
-         var counterMoney = 0;
-
+//    counterPower = 0;
+//          counterCape = 0;
+//          counterWeather = 0;
+//          counterMoney = 0;
+//          counterTint = 0;
         for (let i = 0; questions.length; i++) {
             if (questions[i]["power"] === p) {
                 questions[i]["power"]++;
@@ -129,7 +130,13 @@ submit.addEventListener("click", function () {
                             questions[i]["money"]++;
                             result.push(questions[i]);
                         }
-                        return getHighestCounter(result);
+                        for (let i = 0; questions.length; i++) {
+                        if (questions[i]["color"] === t) {
+                            questions[i]["color"]++;
+                            result.push(questions[i]);
+                        }
+                    }
+                        return getHighestCounter(resultData);
 
                     }
 
@@ -139,7 +146,7 @@ submit.addEventListener("click", function () {
                         return data.reduce(
                             (max, data) => (data.counter > max ? data.counter : max),
                             data[0]
-                        )
+                        );
                     }
                 }
             }
