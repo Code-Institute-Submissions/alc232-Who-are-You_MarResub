@@ -79,6 +79,11 @@ var questions = [{
     "counter": 0
 }
 ];
+// function to display image index page
+function showDiv() {
+    div = document.getElementById('none');
+    div.style.display = "block";
+}
 // button for submitting data
 let submit = document.getElementById("submit");
 
