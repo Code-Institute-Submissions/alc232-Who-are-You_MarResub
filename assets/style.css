@@ -47,7 +47,7 @@ label{
     font-weight: 900;
     color: antiquewhite;
 }
-
+/*  btn styling and hover class */
 .btn {
   border: 1px solid gold;
   background-color: black;
@@ -66,3 +66,15 @@ label{
     color: black;
 }
 
+/* info bar index.html */
+.infoBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    color: gold;
+    padding: 5px;
+}
+.none {
+  display: none;
+}
