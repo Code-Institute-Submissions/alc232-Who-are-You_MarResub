@@ -1,6 +1,7 @@
 var questions = [{
     // goku
-    "tint": "orange",
+    "color": "Orange",
+    "character" : "Goku",
     "power": "strength",
     "cape": "no",
     "weather": "sunny",
@@ -10,7 +11,8 @@ var questions = [{
 },
 // Superman
 {
-    "tint": "red",
+    "color": "Red",
+    "character" : "Superman",
     "power": "Man if Steel",
     "cape": "yes",
     "weather": "sunny",
@@ -20,7 +22,8 @@ var questions = [{
 },
 // batman
 {
-    "tint": "black",
+    "color": "Black",
+    "character" : "Batman",
     "power": "money",
     "cape": "yes",
     "weather": "rain",
@@ -30,7 +33,8 @@ var questions = [{
 },
 // green lantern
 {
-    "tint": "green",
+    "color": "Green",
+    "character" : "Grren Lantern",
     "power": "ring",
     "cape": "no",
     "weather": "wind",
@@ -40,7 +44,8 @@ var questions = [{
 },
 // thor
 {
-    "tint": "silver",
+    "color": "Silver",
+    "character" : "Thor",
     "power": "hammer",
     "cape": "yes",
     "weather": "wind",
@@ -50,7 +55,8 @@ var questions = [{
 },
 // captain america 
 {
-    "tint": "blue",
+    "color": "Blue",
+    "character" : "Captain America",
     "power": "shield",
     "cape": "no",
     "weather": "rain",
@@ -60,7 +66,8 @@ var questions = [{
 },
 // black panther
 {
-    "tint": "grey",
+    "color": "Grey",
+    "character" : "Black Panther",
     "power": "claws",
     "cape": "no",
     "weather": "sunny",
@@ -70,7 +77,8 @@ var questions = [{
 },
 // wolverine
 {
-    "tint": "yellow",
+    "color": "Yellow",
+    "character" : "Wolverine",
     "power": "blades",
     "cape": "no",
     "weather": "Thunder",
@@ -79,7 +87,7 @@ var questions = [{
     "counter": 0
 }
 ];
-// function to display image index page
+// function to display text index page
 function showDiv() {
     div = document.getElementById('none');
     div.style.display = "block";
@@ -93,55 +101,44 @@ submit.addEventListener("click", function () {
     let cape = document.getElementById("cape").value;
     let weather = document.getElementById("weather").value;
     let money = document.getElementById("money").value;
-    let tint = document.getElementById("tint").value;
 
-    const resultData = showImage(power, cape, weather, money, tint);
+    const resultData = showImage(power, cape, weather, money);
 
     let output = document.getElementById("output");
 
     console.log(resultData);
 
     // display on page
-    output.innerHTML=`<h2>${name} your superhero reccomedation is ${resultData}</h2>`;
+    output.innerHTML=`<h2>${name} your superhero reccomedation is ${resultData.character}</h2>`;
 
-    output.innerHTML += `<img style="width : 400px" src="${resultData.image}">`;
+    output.innerHTML += `<img style="width : 100%" src="${resultData.image}">`;
 
     // function to show images
 
-    function showImage(p, c, w, m, t) {
-         var result = [];
-//    counterPower = 0;
-//          counterCape = 0;
-//          counterWeather = 0;
-//          counterMoney = 0;
-//          counterTint = 0;
+    function showImage() {
+        var result = [];
+
         for (let i = 0; questions.length; i++) {
-            if (questions[i]["power"] === p) {
-                questions[i]["power"]++;
+            if (questions[i]["power"] === power) {
+                questions[i]["counter"]++;
                 result.push(questions[i]);
             }
             for (let i = 0; questions.length; i++) {
-                if (questions[i]["cape"] === c) {
-                    questions[i]["cape"]++;
+                if (questions[i]["cape"] === cape) {
+                    questions[i]["counter"]++;
                     result.push(questions[i]);
                 }
                 for (let i = 0; questions.length; i++) {
-                    if (questions[i]["weather"] === w) {
-                        questions[i]["weather"]++;
+                    if (questions[i]["weather"] === weather) {
+                        questions[i]["counter"]++;
                         result.push(questions[i]);
                     }
                     for (let i = 0; questions.length; i++) {
-                        if (questions[i]["money"] === m) {
-                            questions[i]["money"]++;
+                        if (questions[i]["money"] === money) {
+                            questions[i]["counter"]++;
                             result.push(questions[i]);
-                        }
-                        for (let i = 0; questions.length; i++) {
-                        if (questions[i]["color"] === t) {
-                            questions[i]["color"]++;
-                            result.push(questions[i]);
-                        }
                     }
-                        return getHighestCounter(resultData);
+                        return getHighestCounter(result);
 
                     }
 
