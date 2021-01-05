@@ -1,7 +1,7 @@
 var questions = [{
     // goku
     "color": "Orange",
-    "character" : "Goku",
+    "character": "Goku",
     "power": "strength",
     "cape": "no",
     "weather": "sunny",
@@ -12,7 +12,7 @@ var questions = [{
 // Superman
 {
     "color": "Red",
-    "character" : "Superman",
+    "character": "Superman",
     "power": "Man if Steel",
     "cape": "yes",
     "weather": "sunny",
@@ -23,7 +23,7 @@ var questions = [{
 // batman
 {
     "color": "Black",
-    "character" : "Batman",
+    "character": "Batman",
     "power": "money",
     "cape": "yes",
     "weather": "rain",
@@ -34,7 +34,7 @@ var questions = [{
 // green lantern
 {
     "color": "Green",
-    "character" : "Grren Lantern",
+    "character": "Grren Lantern",
     "power": "ring",
     "cape": "no",
     "weather": "wind",
@@ -45,7 +45,7 @@ var questions = [{
 // thor
 {
     "color": "Silver",
-    "character" : "Thor",
+    "character": "Thor",
     "power": "hammer",
     "cape": "yes",
     "weather": "wind",
@@ -56,7 +56,7 @@ var questions = [{
 // captain america 
 {
     "color": "Blue",
-    "character" : "Captain America",
+    "character": "Captain America",
     "power": "shield",
     "cape": "no",
     "weather": "rain",
@@ -67,7 +67,7 @@ var questions = [{
 // black panther
 {
     "color": "Grey",
-    "character" : "Black Panther",
+    "character": "Black Panther",
     "power": "claws",
     "cape": "no",
     "weather": "sunny",
@@ -78,7 +78,7 @@ var questions = [{
 // wolverine
 {
     "color": "Yellow",
-    "character" : "Wolverine",
+    "character": "Wolverine",
     "power": "blades",
     "cape": "no",
     "weather": "Thunder",
@@ -109,7 +109,7 @@ submit.addEventListener("click", function () {
     console.log(resultData);
 
     // display on page
-    output.innerHTML=`<h2>${name} your superhero reccomedation is ${resultData.character}</h2>`;
+    output.innerHTML = `<h2>${name} your superhero recomendation is ${resultData.character}</h2>`;
 
     output.innerHTML += `<img style="width : 100%" src="${resultData.image}">`;
 
@@ -118,40 +118,35 @@ submit.addEventListener("click", function () {
     function showImage() {
         var result = [];
 
+
         for (let i = 0; questions.length; i++) {
             if (questions[i]["power"] === power) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
-            for (let i = 0; questions.length; i++) {
-                if (questions[i]["cape"] === cape) {
-                    questions[i]["counter"]++;
-                    result.push(questions[i]);
-                }
-                for (let i = 0; questions.length; i++) {
-                    if (questions[i]["weather"] === weather) {
-                        questions[i]["counter"]++;
-                        result.push(questions[i]);
-                    }
-                    for (let i = 0; questions.length; i++) {
-                        if (questions[i]["money"] === money) {
-                            questions[i]["counter"]++;
-                            result.push(questions[i]);
-                    }
-                        return getHighestCounter(result);
-
-                    }
-
-
-                    // Gets object with highest counter
-                    function getHighestCounter(data) {
-                        return data.reduce(
-                            (max, data) => (data.counter > max ? data.counter : max),
-                            data[0]
-                        );
-                    }
-                }
+            if (questions[i]["cape"] === cape) {
+                questions[i]["counter"]++;
+                result.push(questions[i]);
             }
+            if (questions[i]["weather"] === weather) {
+                questions[i]["counter"]++;
+                result.push(questions[i]);
+            }
+            if (questions[i]["money"] === money) {
+                questions[i]["counter"]++;
+                result.push(questions[i]);
+            }
+            return getHighestCounter(result);
+
+        }
+
+
+        // Gets object with highest counter
+        function getHighestCounter(data) {
+            return data.reduce(
+                (max, data) => (data.counter > max ? data.counter : max),
+                data[0]
+            );
         }
     }
 });
