@@ -1,6 +1,6 @@
 var questions = [{
     // goku
-    "color": "Orange",
+    "color": "orange",
     "character": "Goku",
     "power": "strength",
     "cape": "no",
@@ -11,18 +11,18 @@ var questions = [{
 },
 // Superman
 {
-    "color": "Red",
-    "character": "Superman",
-    "power": "Man if Steel",
-    "cape": "yes",
-    "weather": "sunny",
-    "money": "no",
-    "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapercave.com%2Fsuperman-cartoon-wallpapers&psig=AOvVaw0qmKy5nedU3qazSzrsBc1d&ust=1609282431766000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKD78bLi8e0CFQAAAAAdAAAAABAD",
+    "color" : "red",
+    "character" : "Superman",
+    "power" : "Man if Steel",
+    "cape" : "yes",
+    "weather" : "sunny",
+    "money" : "no",
+    "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapercave.com%2Fsuperman-cartoon-wallpapers&psig=AOvVaw0qmKy5nedU3qazSzrsBc1d&ust=1609282431766000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKD78bLi8e0CFQAAAAAdAAAAABAD",
     "counter": 0
 },
 // batman
 {
-    "color": "Black",
+    "color": "black",
     "character": "Batman",
     "power": "money",
     "cape": "yes",
@@ -30,10 +30,11 @@ var questions = [{
     "money": "yes",
     "image": "https://img.cinemablend.com/filter:scale/quill/6/b/0/8/9/2/6b08928dc1fb6884e189c7434125ba7f344407b7.jpg?mw=600",
     "counter": 0
-},
+}
+,
 // green lantern
 {
-    "color": "Green",
+    "color": "green",
     "character": "Grren Lantern",
     "power": "ring",
     "cape": "no",
@@ -41,10 +42,11 @@ var questions = [{
     "money": "yes",
     "image": "https://www.goodcomicstoread.com/wp-content/uploads/2020/01/green-lantern-678x381.jpg",
     "counter": 0
-},
+}
+,
 // thor
 {
-    "color": "Silver",
+    "color": "silver",
     "character": "Thor",
     "power": "hammer",
     "cape": "yes",
@@ -52,10 +54,11 @@ var questions = [{
     "money": "yes",
     "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcomicvine.gamespot.com%2Fthor%2F4005-2268%2Fforums%2Fwould-you-watch-a-mighty-thor-cartoon-376272%2F&psig=AOvVaw3vqGo_406mWrCRBGCYt3Hn&ust=1609282571111000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjd9vPi8e0CFQAAAAAdAAAAABAD",
     "counter": 0
-},
+}
+,
 // captain america 
 {
-    "color": "Blue",
+    "color": "blue",
     "character": "Captain America",
     "power": "shield",
     "cape": "no",
@@ -63,10 +66,11 @@ var questions = [{
     "money": "yes",
     "image": "https://www.small-screen.co.uk/wp-content/uploads/2019/11/captain-america-marvel-comics-1050x450.jpg",
     "counter": 0
-},
+}
+,
 // black panther
 {
-    "color": "Grey",
+    "color": "grey",
     "character": "Black Panther",
     "power": "claws",
     "cape": "no",
@@ -77,16 +81,19 @@ var questions = [{
 },
 // wolverine
 {
-    "color": "Yellow",
+    "color": "yellow",
     "character": "Wolverine",
     "power": "blades",
     "cape": "no",
     "weather": "Thunder",
     "money": "yes",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXfPTaPq2n5nzQC-3UpQFBY8tYYywAAuZykg&usqp=CAU",
+    "image": "https://fastly.syfy.com/sites/syfy/files/2020/02/stl149580.jpg",
     "counter": 0
 }
-];
+
+]
+
+console.log(questions);
 // function to display text index page
 function showDiv() {
     div = document.getElementById('none');
@@ -101,8 +108,9 @@ submit.addEventListener("click", function () {
     let cape = document.getElementById("cape").value;
     let weather = document.getElementById("weather").value;
     let money = document.getElementById("money").value;
+    let character = document.getElementById("character");
 
-    const resultData = showImage(power, cape, weather, money);
+    const resultData = showImage(power, cape, weather, money, character);
 
     let output = document.getElementById("output");
 
@@ -117,7 +125,10 @@ submit.addEventListener("click", function () {
 
     function showImage() {
         var result = [];
-
+         var counterPower = 0;
+         var counterCape = 0;
+         var counterWeather = 0;
+         var counterMoney = 0;
 
         for (let i = 0; questions.length; i++) {
             if (questions[i]["power"] === power) {
