@@ -114,7 +114,7 @@ submit.addEventListener("click", function () {
 
     let output = document.getElementById("output");
 
-    console.log(resultData);
+    // console.log(resultData);
 
     // display on page
     output.innerHTML = `<h2>${name} your superhero recomendation is ${resultData.character}</h2>`;
