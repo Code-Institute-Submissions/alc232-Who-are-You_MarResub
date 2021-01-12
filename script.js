@@ -121,29 +121,27 @@ submit.addEventListener("click", function () {
 
     output.innerHTML += `<img style="width : 100%" src="${resultData.image}">`;
 
+    
+
     // function to show images
 
-    function showImage() {
+    function showImage(p, c, w, m) {
         var result = [];
-         var counterPower = 0;
-         var counterCape = 0;
-         var counterWeather = 0;
-         var counterMoney = 0;
 
         for (let i = 0; questions.length; i++) {
-            if (questions[i]["power"] === power) {
+            if (questions[i]["power"] === p) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
-            if (questions[i]["cape"] === cape) {
+            if (questions[i]["cape"] === c) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
-            if (questions[i]["weather"] === weather) {
+            if (questions[i]["weather"] === w) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
-            if (questions[i]["money"] === money) {
+            if (questions[i]["money"] === m) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
