@@ -1,14 +1,4 @@
-var questions = [{
-    // goku
-    "color": "orange",
-    "character": "Goku",
-    "power": "strength",
-    "cape": "no",
-    "weather": "sunny",
-    "money": "yes",
-    "image": "https://i.pinimg.com/originals/ac/a4/6d/aca46d09a1badb457d44d039f2c4754d.jpg",
-    "counter": 0
-},
+var questions = [
 // Superman
 {
     "color" : "red",
@@ -17,7 +7,17 @@ var questions = [{
     "cape" : "yes",
     "weather" : "sunny",
     "money" : "no",
-    "image" : "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpapercave.com%2Fsuperman-cartoon-wallpapers&psig=AOvVaw0qmKy5nedU3qazSzrsBc1d&ust=1609282431766000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKD78bLi8e0CFQAAAAAdAAAAABAD",
+    "image" : "https://wallpaperaccess.com/full/1897373.jpg",
+    "counter": 0
+}, 
+{// goku
+    "color": "orange",
+    "character": "Goku",
+    "power": "strength",
+    "cape": "no",
+    "weather": "sunny",
+    "money": "yes",
+    "image": "https://i.pinimg.com/originals/ac/a4/6d/aca46d09a1badb457d44d039f2c4754d.jpg",
     "counter": 0
 },
 // batman
@@ -30,8 +30,7 @@ var questions = [{
     "money": "yes",
     "image": "https://img.cinemablend.com/filter:scale/quill/6/b/0/8/9/2/6b08928dc1fb6884e189c7434125ba7f344407b7.jpg?mw=600",
     "counter": 0
-}
-,
+},
 // green lantern
 {
     "color": "green",
@@ -42,8 +41,7 @@ var questions = [{
     "money": "yes",
     "image": "https://www.goodcomicstoread.com/wp-content/uploads/2020/01/green-lantern-678x381.jpg",
     "counter": 0
-}
-,
+},
 // thor
 {
     "color": "silver",
@@ -54,8 +52,7 @@ var questions = [{
     "money": "yes",
     "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fcomicvine.gamespot.com%2Fthor%2F4005-2268%2Fforums%2Fwould-you-watch-a-mighty-thor-cartoon-376272%2F&psig=AOvVaw3vqGo_406mWrCRBGCYt3Hn&ust=1609282571111000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjd9vPi8e0CFQAAAAAdAAAAABAD",
     "counter": 0
-}
-,
+},
 // captain america 
 {
     "color": "blue",
@@ -66,8 +63,7 @@ var questions = [{
     "money": "yes",
     "image": "https://www.small-screen.co.uk/wp-content/uploads/2019/11/captain-america-marvel-comics-1050x450.jpg",
     "counter": 0
-}
-,
+},
 // black panther
 {
     "color": "grey",
@@ -93,7 +89,6 @@ var questions = [{
 
 ]
 
-console.log(questions);
 // function to display text index page
 function showDiv() {
     div = document.getElementById('none');
@@ -110,7 +105,7 @@ submit.addEventListener("click", function () {
     let money = document.getElementById("money").value;
     let character = document.getElementById("character");
 
-    const resultData = showImage(power, cape, weather, money, character);
+    const resultData = showImage(power, weather, money, character);
 
     let output = document.getElementById("output");
 
@@ -121,34 +116,34 @@ submit.addEventListener("click", function () {
 
     output.innerHTML += `<img style="width : 100%" src="${resultData.image}">`;
 
-    
+});
 
     // function to show images
 
-    function showImage(p, c, w, m) {
+    function showImage() {
         var result = [];
 
-        for (let i = 0; questions.length; i++) {
-            if (questions[i]["power"] === p) {
+        for (let i = 0; i < questions.length; i++) {
+            if (questions[i]["power"]) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
-            if (questions[i]["cape"] === c) {
+            if (questions[i]["cape"]) {
+                questions[i]["counter"]++;
+                console.log("counter");
+                result.push(questions[i]);
+            }
+             if (questions[i]["weather"]) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
-            if (questions[i]["weather"] === w) {
-                questions[i]["counter"]++;
-                result.push(questions[i]);
-            }
-            if (questions[i]["money"] === m) {
+            if (questions[i]["money"]) {
                 questions[i]["counter"]++;
                 result.push(questions[i]);
             }
             return getHighestCounter(result);
-
+            
         }
-
 
         // Gets object with highest counter
         function getHighestCounter(data) {
@@ -156,6 +151,5 @@ submit.addEventListener("click", function () {
                 (max, data) => (data.counter > max ? data.counter : max),
                 data[0]
             );
-        }
-    }
-});
+            }
+};
