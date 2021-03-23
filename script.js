@@ -122,19 +122,19 @@ function showImage() {
 
     for (var i = 0; i < questions.length; i++) {
         if (selectedPower = power.options[power.selectedIndex].value) {
-            questions[i]["power"] === power;
+            questions[i]["power"] = power;
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
-        if (questions[i]["cape"] === cape) {
+        if (questions[i]["cape"] = cape) {
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
-        if (questions[i]["weather"] === weather) {
+        if (questions[i]["weather"] = weather) {
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
-        if (questions[i]["money"] === money) {
+        if (questions[i]["money"] = money) {
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
