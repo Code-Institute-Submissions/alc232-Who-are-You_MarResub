@@ -121,8 +121,7 @@ function showImage() {
     var result = [];
 
     for (var i = 0; i < questions.length; i++) {
-        if (selectedPower = power.options[power.selectedIndex].value) {
-            questions[i]["power"] = power;
+        if (questions[i]["power"] = power){
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
