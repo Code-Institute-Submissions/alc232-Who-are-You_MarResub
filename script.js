@@ -1,3 +1,15 @@
+let nameElement = document.getElementById("name");
+let powerElement = document.getElementById("power");
+let capeElement = document.getElementById("cape");
+let weatherElement = document.getElementById("weather");
+let moneyElement = document.getElementById("money");
+
+let name;
+let power;
+let cape;
+let weather;
+let money;
+
 var questions = [
     {
         "color": "red",
@@ -32,7 +44,7 @@ var questions = [
     },
     {
         "color": "green",
-        "character": "Grren Lantern",
+        "character": "Green Lantern",
         "power": "ring",
         "cape": "no",
         "weather": "wind",
@@ -95,11 +107,11 @@ function showDiv() {
 let submit = document.getElementById("submit");
 
 submit.addEventListener("click", function () {
-    let name = document.getElementById("name").value;
-    let power = document.getElementById("power").value;
-    let cape = document.getElementById("cape").value;
-    let weather = document.getElementById("weather").value;
-    let money = document.getElementById("money").value;
+    name = nameElement.value;
+    power = powerElement.value;
+    cape = capeElement.value;
+    weather = weatherElement.value;
+    money = moneyElement.value;
 
 
     const resultData = showImage(power, cape, weather, money);
@@ -109,7 +121,7 @@ submit.addEventListener("click", function () {
     console.log(resultData);
 
     // display on page
-    output.innerHTML = `<h2>${name} your superhero recomendation is ${resultData}</h2>`;
+    output.innerHTML = `<h2>${name} your superhero recomendation is ${resultData.character}</h2>`;
 
     output.innerHTML += `<img style="width : 100%" src="${resultData.image}">`;
 
@@ -122,15 +134,15 @@ function showImage() {
 
     for (var i = 0; i < questions.length; i++) {
         if (questions[i]["power"] = power){
-            questions[i]["counter"]++;
+            questions[i]["counter"]++
             result.push(questions[i]);
         }
         if (questions[i]["cape"] = cape) {
-            questions[i]["counter"]++;
+            questions[i]["counter"]++
             result.push(questions[i]);
         }
         if (questions[i]["weather"] = weather) {
-            questions[i]["counter"]++;
+            questions[i]["counter"]++
             result.push(questions[i]);
         }
         if (questions[i]["money"] = money) {
