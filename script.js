@@ -8,7 +8,7 @@ var questions = [
         "money": "no",
         "image": "https://wallpaperaccess.com/full/1897373.jpg",
         "counter": 0
-    }, 
+    },
     {
 
         "color": "orange",
@@ -100,16 +100,16 @@ submit.addEventListener("click", function () {
     let cape = document.getElementById("cape").value;
     let weather = document.getElementById("weather").value;
     let money = document.getElementById("money").value;
-    let character = document.getElementById("character");
 
-    const resultData = showImage(power, weather, money, character);
+
+    const resultData = showImage(power, cape, weather, money);
 
     let output = document.getElementById("output");
 
-    // console.log(resultData);
+    console.log(resultData);
 
     // display on page
-    output.innerHTML = `<h2>${name} your superhero recomendation is ${resultData.character}</h2>`;
+    output.innerHTML = `<h2>${name} your superhero recomendation is ${resultData}</h2>`;
 
     output.innerHTML += `<img style="width : 100%" src="${resultData.image}">`;
 
@@ -120,21 +120,21 @@ submit.addEventListener("click", function () {
 function showImage() {
     var result = [];
 
-    for (let i = 0; i < questions.length; i++) {
-        if (questions[i]["power"]) {
+    for (var i = 0; i < questions.length; i++) {
+        if (selectedPower = power.options[power.selectedIndex].value) {
+            questions[i]["power"] === power;
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
-        if (questions[i]["cape"]) {
-            questions[i]["counter"]++;
-            console.log("counter");
-            result.push(questions[i]);
-        }
-        if (questions[i]["weather"]) {
+        if (questions[i]["cape"] === cape) {
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
-        if (questions[i]["money"]) {
+        if (questions[i]["weather"] === weather) {
+            questions[i]["counter"]++;
+            result.push(questions[i]);
+        }
+        if (questions[i]["money"] === money) {
             questions[i]["counter"]++;
             result.push(questions[i]);
         }
