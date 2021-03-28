@@ -14,6 +14,17 @@ As a user I want :
 - To be simple and and easy to understand.
 - To be able to play on any device.
 
+## Deployment and Live page
+
+The site has been deployed to github and is accessible on [Github Pages](https://alc232.github.io/East-Coast_Gym/)
+>
+## Wireframe
+
+I have drafted up a wireframe using Figma. The design was and is very basic as I wanted to focus solely on the functionality!
+This can be found [here](https://github.com/alc232/East-Coast_Gym/blob/master/wireframe/new-project-1.pdf)
+>
+
+
 ## Design 
 
 The game was designed to be challenging fun and interactive to people of all ages.  The game is of the theme of popular characters. 
