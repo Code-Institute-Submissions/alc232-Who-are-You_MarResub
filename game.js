@@ -1,15 +1,3 @@
-let nameElement = document.getElementById("name");
-let powerElement = document.getElementById("power");
-let capeElement = document.getElementById("cape");
-let weatherElement = document.getElementById("weather");
-let moneyElement = document.getElementById("money");
-
-let name = '';
-let power = '';
-let cape = '';
-let weather = '';
-let money = '';
-
 let questions = [
     {
         "color": "orange",
@@ -20,7 +8,7 @@ let questions = [
         "money": "yes",
         "image": "https://i.pinimg.com/originals/ac/a4/6d/aca46d09a1badb457d44d039f2c4754d.jpg",
         "counter": 0
-        
+
     },
     {
 
@@ -98,17 +86,19 @@ let questions = [
     }
 
 ]
-const resultData = showImage(power, cape, weather, money);
+
+
 
 // button for submitting data
 let submit = document.getElementById("submit");
 
 submit.addEventListener("click", function () {
-    name = nameElement.value;
-    power = powerElement.value;
-    cape = capeElement.value;
-    weather = weatherElement.value;
-    money = moneyElement.value;
+    var nameElement = document.getElementById("name");
+    var powerElement = document.getElementById("power");
+    var capeElement = document.getElementById("cape");
+    var weatherElement = document.getElementById("weather");
+    var moneyElement = document.getElementById("money");
+
 
     console.log(power, cape, weather, money);
 
@@ -119,7 +109,7 @@ submit.addEventListener("click", function () {
     console.log(resultData);
 
     // display on page
-    for(let i = 0; i < resultData.length; i++){
+    for (let i = 0; i < resultData.length; i++) {
         console.log(resultData[i].image);
 
         output.innerHTML += `<h2>${name} your superhero recomendation is ${resultData[i].character}</h2><img style="width : 100%" src="${resultData[i].image}">`;
@@ -130,37 +120,21 @@ submit.addEventListener("click", function () {
 // function to show images
 
 function showImage(power, cape, weather, money) {
-    var result = [];
-    
+    var result = []
     for (let i = 0; i < questions.length; i++) {
-        if (questions[i]["power"] = power){
-            questions[i]["counter"]++
-            result.push(questions[i]);
+        result.push(questions[i]);
+        if (result[i]["power"] === power) {
+            result[i]["counter"]++
         }
-        if (questions[i]["cape"] = cape) {
-            questions[i]["counter"]++
-            result.push(questions[i]);
+        if (result[i]["cape"] === cape) {
+            result[i]["counter"]++
         }
-        if (questions[i]["weather"] = weather) {
-            questions[i]["counter"]++
-            result.push(questions[i]);
+        if (result[i]["weather"] === weather) {
+            result[i]["counter"]++
         }
-        if (questions[i]["money"] = money) {
-            questions[i]["counter"]++;
-            result.push(questions[i]);
+        if (result[i]["money"] === money) {
+            result[i]["counter"]++;
         }
-
-        console.log(result);
-        return result;
-       
     }
-
-    // Gets object with highest counter
-    function getHighestCounter(data) {
-        return data.reduce(
-            (max, data) => (data.counter > max ? data.counter : max),
-            data[0]
-        );
-    }
-     return getHighestCounter(result);
-};
+    return result.reduce((prev, current) => (prev.counter > current.counter) ? prev : current);
+}
