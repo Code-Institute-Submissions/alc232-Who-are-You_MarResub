@@ -137,9 +137,19 @@ function showImage(power, cape, weather, money) {
         if (questions[i]["weather"] === weather) {
             questions[i]["counter"]++;
             result.push(question[i]);
-
-
-
         }
+        //console.log(getHighestCounter(result));
+     return getHighestCounter(result);
     }
+};
+
+function getHighestCounter(data) {
+     console.log(removeDuplicateObjectFromArray(data, 'character'))
 }
+
+
+function removeDuplicateObjectFromArray(array, key) {
+  var check = new Set();
+  return array.filter(obj => !check.has(obj[key]) && check.add(obj[key]));
+}
+ 
