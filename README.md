@@ -16,12 +16,12 @@ As a user I want :
 
 ## Deployment and Live page
 
-The site has been deployed to github and is accessible on [Github Pages](https://alc232.github.io/East-Coast_Gym/)
+The site has been deployed to github and is accessible on [Github Pages](https://github.com/alc232/Who-are-You)
 >
 ## Wireframe
 
 I have drafted up a wireframe using Figma. The design was and is very basic as I wanted to focus solely on the functionality!
-This can be found [here](https://github.com/alc232/East-Coast_Gym/blob/master/wireframe/new-project-1.pdf)
+This can be found [here](https://github.com/alc232/Who-are-You/tree/master/wirefame)
 >
 
 
