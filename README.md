@@ -69,9 +69,7 @@ All images were taken from google.
 
 The speed of the page was tested here at [UpTrends](https://www.uptrends.com/tools/website-speed-test)
 
-I used [w3c](https://www.w3.org/)
-
-
+I used [w3c](https://www.w3.org/) to test the HTML and CSS.
 
 # Acknowledgements
 
