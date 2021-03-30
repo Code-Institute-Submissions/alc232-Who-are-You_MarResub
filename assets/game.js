@@ -12,7 +12,7 @@ let questions = [
     {
         "color": "red",
         "character": "Superman",
-        "power": "Man of Steel",
+        "power": "manOfSteel",
         "cape": "yes",
         "weather": "sunny",
         "money": "no",
