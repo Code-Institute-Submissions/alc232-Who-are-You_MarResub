@@ -81,6 +81,7 @@ let questions = [
     }
 ];
 
+
 // button for submitting data
 let submit = document.getElementById("submit");
 submit.addEventListener("click", function () {
@@ -92,14 +93,13 @@ submit.addEventListener("click", function () {
     var money = document.getElementById("money").value;
     
     var resultData = showImage(power);
-    console.log(resultData);
+    
     var output = document.getElementById("output");
-    // var imagesDisplay = document.getElementById('resultImage');
+    
     // display on page
     for(let i = 0; i < resultData.length; i++){
 
         output.innerHTML += `<h2>${name} your superhero recomendation is ${resultData[i].character}</h2><img style="width : 100%" src="${resultData[i].image}">`;
-        console.log(resultData[i]);
     }
 
 // function to show images
