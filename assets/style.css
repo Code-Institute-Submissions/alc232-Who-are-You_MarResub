@@ -76,6 +76,7 @@ label{
   outline: none;
   font-size: 23px;
   width: 100%;
+  text-align: center;
 }
 
 #refresh:hover {
