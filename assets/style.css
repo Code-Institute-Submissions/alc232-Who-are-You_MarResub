@@ -66,6 +66,20 @@ label{
     color: black;
 }
 
+#refresh {
+  background-color: black;
+  color: gold;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid gold;
+  outline: none;
+}
+
+#refresh:hover {
+    background-color: gold;
+    color: black;
+}
+
 /* info bar index.html */
 .container, .btn-info {
     border: 1px solid gold;

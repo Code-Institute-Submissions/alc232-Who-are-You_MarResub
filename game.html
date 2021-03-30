@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <title>Which Superhero Are You?</title>
-</head> 
-<body>   
+</head>
+
+<body>
     <div class="container">
-        <label for="name" >Name</label>
+        <label for="name">Name</label>
         <input type="text" name="name" id="name" required>
-        
+
         <label for="color">What is your favourite color?</label>
         <select type="text" name="color" id="color">
-        <option value="orange">Orange</option> 
-        <option value="red">Red</option>
-        <option value="black">Black</option>
-        <option value="silver">Silver</option>
-        <option value="blue">Blue</option>   
-        <option value="grey">Grey</option>
-        <option value="yellow">Yellow</option> 
+            <option value="orange">Orange</option>
+            <option value="red">Red</option>
+            <option value="black">Black</option>
+            <option value="silver">Silver</option>
+            <option value="blue">Blue</option>
+            <option value="grey">Grey</option>
+            <option value="yellow">Yellow</option>
         </select>
-        
+
         <label for="power">What would be your choice of super power?</label>
-         <select type="text" name="power" id="power">
-        <option value="strength">Strength</option>
-        <option value="manOfSteel">Man of Steel</option>
-        <option value="ring">Ring</option>
-        <option value="hammer">Hammer</option>
-        <option value="shield">Shield</option>
-        <option value="claws">Claws</option>
-        <option value="blades">Blades</option>
-        </select> 
-        
-         <label for="cape">Would you wear a cape</label>
-        <select type="text" name="cape" id="cape"> 
-        <option value="yes">Yes</option> 
-        <option value="no">No</option>
-        </select> 
-         
+        <select type="text" name="power" id="power">
+            <option value="strength">Strength</option>
+            <option value="manOfSteel">Man of Steel</option>
+            <option value="ring">Ring</option>
+            <option value="hammer">Hammer</option>
+            <option value="shield">Shield</option>
+            <option value="claws">Claws</option>
+            <option value="blades">Blades</option>
+        </select>
+
+        <label for="cape">Would you wear a cape</label>
+        <select type="text" name="cape" id="cape">
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select>
+
         <label for="weather">What is your Ideal weather condition?</label>
         <select type="text" name="weather" id="weather">
             <option value="sunny">Sunny</option>
-            <option value="rain">Rain</option>   
+            <option value="rain">Rain</option>
             <option value="wind">Wind</option>
             <option value="thunder">Thunder</option>
             <option value="snow">Snow</option>
-        </select> 
+        </select>
 
-        <div class="characters" id="character"></div> 
+        <div class="characters" id="character"></div>
 
-         <label for="money">If you found money in a shop what would you keep it?</label>
+        <label for="money">If you found money on the street would you keep it?</label>
         <select type="text" name="money" id="money">
-            <option value="no">No</option>
+            <option value="no">No</option>  
             <option value="yes">Yes</option>
-    </select>
+        </select>
 
         <button onclick="style.display = 'none'" id="submit" class="btn">Power UP!!!</button>
         <div id="output">
-
-            <button id="refresh"><i class="fas fa-redo"></i>Click here to replay!</button>
-         
-        </div> 
+        </div>
+        <a href="game.html"><button id="refresh">Want to play again??</button></a>
     </div>
-    <script src="assets/game.js"></script>  
-</body>  
-</html>  
+
+    <script src="assets/game.js"></script>
+</body>
+
+</html>
