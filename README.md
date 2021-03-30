@@ -2,7 +2,7 @@
 
 ## Desciption
 
-This is a question and answer based quiz, my daughter loves playing these games. The aim of the game is to find out which character you represent based on the answers you give. This game is open for anyone to play.
+This is a question and answer based quiz, my daughter loves playing these games and discovering different characters. The aim of the game is to find out which character you best represent based on the answers you give. It is an extremley simple game but is made for everyone to play and enjoy.
 
 ## User Stories
 
@@ -27,15 +27,14 @@ This can be found [here](https://github.com/alc232/Who-are-You/tree/master/wiref
 
 ## Design 
 
-The game was designed to be challenging fun and interactive to people of all ages.  The game is of the theme of popular characters. 
+The game was designed to be challenging fun and interactive to people of all ages.  The game is based of popular superhero characters, making it engaging with children and adults alike. The colours are consistent and designed in a way that is easy to read and use.
 
 ## Features To be added
 
 The game will have features added in the future, a selection of different characters that can be "won". Also you will be able to determine the gender of the character based on the information you provide.
-
-# 
-
-Audio will also be added to add a better experience in the future!
+- More character options will be available.
+- More questions to keep the user engaged for longer.
+- Theme music will be played when the "character" is displayed.
 
 ## Languages and Technologies
 
@@ -44,8 +43,36 @@ Audio will also be added to add a better experience in the future!
 ### CSS 
 
 ### Javascript
+>
+
+## Testing
+- Prototype code was written and tested using jasmine
+- All code used on the site has been tested to ensure everything is working as expected
+- Site viewed and tested in the following browsers:
+  - Google Chrome
+  - Microsoft Edge
+  - Mozilla Firefox
+
+  I also tested on mobile devices and tablets such as:
+
+  - Oppo reno 2z
+  - I phone12 pro
+  - Google pixel
+  - Huawei p40
+  - I pad 
+  - Samsung Galaxy note
+>
+
+## Credits
+
+All images were taken from google.
+
+The speed of the page was tested here at [UpTrends](https://www.uptrends.com/tools/website-speed-test)
+
 
 
 # Acknowledgements
 
 I would like to thank my mentor [Felipe Alarcon](https://github.com/felipe-alarcon) for the patience and willing to try and help. Also I would like to thank everyone at code institute. Ive really struggled with the understanding of JS portion of the course and they have been patient.
+
+Tutor support have been fantastic in this learning process for me. Giving me great 'nudges' in the right direction and keeping me motivated even when I felt all hope was lost. This will be a continuous journey of learning and one I hope comes a lot easier in the future!

@@ -48,31 +48,34 @@ label{
     color: antiquewhite;
 }
 /*  btn styling and hover class */
-.btn {
+#submit {
   border: 1px solid gold;
   background-color: black;
+  color: gold;
   border-radius: 5px;
   padding: 5px 10px;
   margin: 3px;
-  display: grid;
-  justify-content: center;
-  align-items: center;
   color: gold;
   outline: none;
   font-size: 23px;
+  width: 100%;
 }
-.btn:hover{
+#submit:hover{
     background-color: gold;
     color: black;
 }
 
 #refresh {
+  border: 1px solid gold;
   background-color: black;
   color: gold;
-  width: 100%;
   border-radius: 5px;
-  border: 1px solid gold;
+  padding: 5px 10px;
+  margin: 3px;
+  color: gold;
   outline: none;
+  font-size: 23px;
+  width: 100%;
 }
 
 #refresh:hover {
