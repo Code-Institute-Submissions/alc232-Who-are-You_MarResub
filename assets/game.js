@@ -90,15 +90,20 @@ submit.addEventListener("click", function () {
     var cape = document.getElementById("cape").value;
     var weather = document.getElementById("weather").value;
     var money = document.getElementById("money").value;
-    var resultData = showImage(power, cape, weather, money);
+    
+    var resultData = showImage(power);
+    console.log(resultData);
     var output = document.getElementById("output");
+    // var imagesDisplay = document.getElementById('resultImage');
     // display on page
     for(let i = 0; i < resultData.length; i++){
+
         output.innerHTML += `<h2>${name} your superhero recomendation is ${resultData[i].character}</h2><img style="width : 100%" src="${resultData[i].image}">`;
+        console.log(resultData[i]);
     }
 
 // function to show images
-function showImage(power, cape, weather) { 
+function showImage(power, money, weather, cape) { 
     var result = [];
     for (let i = 0; i < questions.length; i++) {
         if (questions[i]["power"] === power){
